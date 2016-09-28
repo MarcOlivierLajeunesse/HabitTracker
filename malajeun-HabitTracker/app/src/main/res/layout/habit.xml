@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Number of days completed"
-        android:id="@+id/textDaysCompleted"
+        android:id="@+id/textTimeCompleted"
         android:layout_marginTop="144dp"
         android:layout_below="@+id/textHabitName"
         android:layout_alignLeft="@+id/textHabitName"
@@ -33,9 +33,9 @@
         android:text="Number of days incompleted"
         android:id="@+id/textDaysIncompleted"
         android:layout_marginTop="22dp"
-        android:layout_below="@+id/textDaysCompleted"
-        android:layout_alignLeft="@+id/textDaysCompleted"
-        android:layout_alignStart="@+id/textDaysCompleted" />
+        android:layout_below="@+id/textTimeCompleted"
+        android:layout_alignLeft="@+id/textTimeCompleted"
+        android:layout_alignStart="@+id/textTimeCompleted" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/textDaysIncompleted"
         android:layout_alignEnd="@+id/textDaysIncompleted"
-        android:layout_alignBottom="@+id/textDaysCompleted" />
+        android:layout_alignBottom="@+id/textTimeCompleted" />
 
     <TextView
         android:layout_width="wrap_content"
