@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Habit Name"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp" />
+
+    <ListView
+        android:layout_width="270dp"
+        android:layout_height="144dp"
+        android:id="@+id/chosenDayList"
+        android:layout_weight="0.71" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Number of times completed: "
+        android:id="@+id/textTimeCompleted" />
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Task" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View History"
+        android:id="@+id/viewHistoryButton" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteHabitButton" />
+
+</LinearLayout>

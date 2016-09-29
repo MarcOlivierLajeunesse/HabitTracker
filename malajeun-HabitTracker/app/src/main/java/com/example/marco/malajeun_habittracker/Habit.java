@@ -42,8 +42,9 @@ public class Habit {
         completeCount = completed.size();
     }
 
-    public List viewCompleted(){
-        return completed.getCompleted();
+    public CompletedList viewCompleted(){
+        //return completed.getCompleted();
+        return completed;
     }
 
     public int getCount(){

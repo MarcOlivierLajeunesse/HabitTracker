@@ -32,15 +32,34 @@ public class HabitTest extends ActivityInstrumentationTestCase2 {
 
     public void testViewCompleted(){
         Habit habit = new Habit();
-        List<Date> list = new ArrayList<>();
+        //List<Date> list = new ArrayList<>();
 
-        assertEquals(list, habit.viewCompleted());
+        //assertEquals(list, habit.viewCompleted());
         assertTrue(habit.getCount() == 0);
+
+        CompletedList cList = habit.viewCompleted();
+        assertTrue(cList.size() == 0);
 
         habit.complete();
         assertTrue(habit.getCount() == 1);
+        cList = habit.viewCompleted();
+        assertTrue(cList.size() == 1);
 
         habit.complete();
         assertTrue(habit.getCount() == 2);
+        cList = habit.viewCompleted();
+        assertTrue(cList.size() == 2);
+    }
+
+    public void testDeleteHistory(){
+        Habit habit = new Habit();
+        habit.complete();
+        assertTrue(habit.getCount() == 1);
+        CompletedList list = habit.viewCompleted();
+        assertTrue(list.size() == 1);
+
+        list.delete(0);
+        assertTrue(list.size() == 0);
+        assertTrue(habit.getCount() == 0);
     }
 }
