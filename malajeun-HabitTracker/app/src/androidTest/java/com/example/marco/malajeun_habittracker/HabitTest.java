@@ -2,7 +2,9 @@ package com.example.marco.malajeun_habittracker;
 
 import android.test.ActivityInstrumentationTestCase2;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Marco on 27-Sep-2016.
@@ -26,5 +28,19 @@ public class HabitTest extends ActivityInstrumentationTestCase2 {
         Date aDate = new Date();
         habit.setDate(aDate);
         assertTrue(aDate.equals(habit.getDate()));
+    }
+
+    public void testViewCompleted(){
+        Habit habit = new Habit();
+        List<Date> list = new ArrayList<>();
+
+        assertEquals(list, habit.viewCompleted());
+        assertTrue(habit.getCount() == 0);
+
+        habit.complete();
+        assertTrue(habit.getCount() == 1);
+
+        habit.complete();
+        assertTrue(habit.getCount() == 2);
     }
 }

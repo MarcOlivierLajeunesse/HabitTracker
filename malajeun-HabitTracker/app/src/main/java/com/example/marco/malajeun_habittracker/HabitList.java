@@ -8,18 +8,23 @@ import java.util.NoSuchElementException;
  * Created by Marco on 27-Sep-2016.
  */
 public class HabitList {
-    List<Habit> habits = new ArrayList<Habit>();
+    //Attributes
+    private List<Habit> habits = new ArrayList<Habit>();
+
+    //Constructor: Default constructor
+
+
+    //Methods
     public void add(Habit habit) {
+
         habits.add(habit);
     }
 
     public boolean hasHabit(Habit habit) {
+
         return habits.contains(habit);
     }
 
-    public List<Habit> getHabits() {
-        return habits;
-    }
 
     public Habit getHabit(Habit habit) {
         int index = habits.indexOf(habit);
@@ -27,10 +32,12 @@ public class HabitList {
     }
 
     public Habit getHabitByIndex(int i) {
+
         return habits.get(i);
     }
 
     public void deleteHabit(Habit habit) {
+
         habits.remove(habit);
     }
 
@@ -43,6 +50,15 @@ public class HabitList {
                 return habit;
             }
         }
-        throw new NoSuchElementException("no habbits have that name");
+        throw new NoSuchElementException("no habits have that name");
+    }
+
+    public int size() {
+        return habits.size();
+    }
+
+    public List<Habit> getHabits() {
+
+        return habits;
     }
 }

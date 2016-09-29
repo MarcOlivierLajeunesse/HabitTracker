@@ -2,6 +2,7 @@ package com.example.marco.malajeun_habittracker;
 
 import android.test.ActivityInstrumentationTestCase2;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
@@ -18,8 +19,7 @@ public class HabitListTest extends ActivityInstrumentationTestCase2 {
     public void testHabitList(){
         HabitList hList = new HabitList();
 
-        List<Habit> habits = hList.getHabits();
-        assertTrue(habits.size() == 0);
+        assertTrue(hList.size() == 0);
     }
 
     public void testAddHabitList(){
@@ -97,7 +97,27 @@ public class HabitListTest extends ActivityInstrumentationTestCase2 {
         hList.deleteHabit(a);
         assertFalse(hList.hasHabit(a));
 
-        List<Habit> habits = hList.getHabits();
-        assertTrue(habits.size() == 0);
+        assertTrue(hList.size() == 0);
+    }
+
+    public void testGetHabits(){
+        HabitList hList = new HabitList();
+
+        Habit a = new Habit();
+        Habit b = new Habit();
+        String habName = "habit a";
+        String habNameB = "habit b";
+        a.setName(habName);
+        b.setName(habNameB);
+
+        hList.add(a);
+        hList.add(b);
+
+        List<Habit> list = new ArrayList<Habit>();
+        list.add(a);
+        list.add(b);
+
+        assertEquals(list, hList.getHabits());
+
     }
 }
