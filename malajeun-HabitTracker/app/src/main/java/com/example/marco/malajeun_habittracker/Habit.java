@@ -13,11 +13,16 @@ public class Habit {
     private Date date;
     private int completeCount;
     private CompletedList completed;
+    private Boolean isComplete;
+
+
 
     //Constructor
     public Habit(){
-        completeCount = 0;
-        completed = new CompletedList();
+        this.completeCount = 0;
+        this.completed = new CompletedList();
+        this.date = new Date();
+        this.isComplete = false;
     }
 
     //Methods
@@ -40,6 +45,7 @@ public class Habit {
     public void complete(){
         completed.addCompleted();
         completeCount = completed.size();
+        isComplete = true;
     }
 
     public CompletedList viewCompleted(){
@@ -53,5 +59,24 @@ public class Habit {
 
     public void updateCount(){
         completeCount = completed.size();
+    }
+
+    private String completionStatus(){
+        if(isComplete){
+            return "completed for the day";
+        } else{
+            return "inclompleted";
+        }
+    }
+
+    public void resetCompletionStatus(){
+        //called at midnight of everyday
+        isComplete = false;
+    }
+
+    @Override
+    public String toString(){
+        return habitName +"\n" + completionStatus();
+
     }
 }
