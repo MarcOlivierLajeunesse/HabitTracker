@@ -56,89 +56,33 @@ public class NewHabitActivity extends AppCompatActivity {
         });
     }
 
-    // from https://developer.android.com/guide/topics/ui/controls/checkbox.html
+    // based on code from https://developer.android.com/guide/topics/ui/controls/checkbox.html
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
         boolean checked = ((CheckBox) view).isChecked();
-
+        NewHabitController nhc = new NewHabitController();
         // Check which checkbox was clicked
         switch(view.getId()) {
             case R.id.checkBoxMonday:
-                if (checked){
-                    //hlc.setDay(0);
-                    days.add("Monday");
-                } else{
-                    //hlc.unsetDay(0);
-                    if(days.contains("Monday")){
-                        days.remove("Monday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Monday");
                 break;
             case R.id.checkBoxTuesday:
-                if (checked){
-                    //hlc.setDay(1);
-                    days.add("Tuesday");
-                } else{
-                    //hlc.unsetDay(1);
-                    if(days.contains("Tuesday")){
-                        days.remove("Tuesday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Tuesday");
                 break;
             case R.id.checkBoxWednesday:
-                if (checked){
-                    //hlc.setDay(2);
-                    days.add("Wednesday");
-                } else{
-                    //hlc.unsetDay(2);
-                    if(days.contains("Wednesday")){
-                        days.remove("Wednesday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Wednesday");
                 break;
             case R.id.checkBoxThursday:
-                if (checked){
-                    //hlc.setDay(3);
-                    days.add("Thursday");
-                } else{
-                    //hlc.unsetDay(3);
-                    if(days.contains("Thursday")){
-                        days.remove("Thursday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Thursday");
                 break;
             case R.id.checkBoxFriday:
-                if (checked){
-                    //hlc.setDay(4);
-                    days.add("Friday");
-                } else{
-                    //hlc.unsetDay(4);
-                    if(days.contains("Friday")){
-                        days.remove("Friday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Friday");
                 break;
             case R.id.checkBoxSaturday:
-                if (checked){
-                    //hlc.setDay(5);
-                    days.add("Saturday");
-                } else{
-                    //hlc.unsetDay(5);
-                    if(days.contains("Saturday")){
-                        days.remove("Saturday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Saturday");
                 break;
             case R.id.checkBoxSunday:
-                if (checked){
-                    //hlc.setDay(6);
-                    days.add("Sunday");
-                } else{
-                    //hlc.unsetDay(6);
-                    if(days.contains("Sunday")){
-                        days.remove("Sunday");
-                    }
-                }
+                nhc.isChecked(checked, days, "Sunday");
                 break;
         }
     }
@@ -160,21 +104,14 @@ public class NewHabitActivity extends AppCompatActivity {
         CheckBox Sat = (CheckBox)findViewById(R.id.checkBoxSaturday);
         CheckBox Sun = (CheckBox)findViewById(R.id.checkBoxSunday);
         // based on code from http://stackoverflow.com/questions/13377904/how-to-clear-checkboxes-when-reset-button-is-clicked
-        if(Mon.isChecked()){
-            Mon.setChecked(false);
-        }if(Tue.isChecked()){
-            Tue.setChecked(false);
-        }if(Wed.isChecked()){
-            Wed.setChecked(false);
-        }if(Thu.isChecked()){
-            Thu.setChecked(false);
-        }if(Fri.isChecked()){
-            Fri.setChecked(false);
-        }if(Sat.isChecked()){
-            Sat.setChecked(false);
-        }if(Sun.isChecked()){
-            Sun.setChecked(false);
-        }
+        NewHabitController nhc = new NewHabitController();
+        nhc.resetCheckBoxes(Mon);
+        nhc.resetCheckBoxes(Tue);
+        nhc.resetCheckBoxes(Wed);
+        nhc.resetCheckBoxes(Thu);
+        nhc.resetCheckBoxes(Fri);
+        nhc.resetCheckBoxes(Sat);
+        nhc.resetCheckBoxes(Sun);
 
     }
 
