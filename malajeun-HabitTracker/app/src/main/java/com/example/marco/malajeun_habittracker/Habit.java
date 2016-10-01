@@ -1,13 +1,12 @@
 package com.example.marco.malajeun_habittracker;
 
-import java.util.ArrayList;
+
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by Marco on 27-Sep-2016.
  */
-public class Habit {
+public class Habit{
     //Attributes
     private String habitName;
     private Date date;
@@ -21,7 +20,7 @@ public class Habit {
     public Habit(){
         this.completeCount = 0;
         this.completed = new CompletedList();
-        this.date = new Date();
+        //this.date = new Date();
         this.isComplete = false;
     }
 

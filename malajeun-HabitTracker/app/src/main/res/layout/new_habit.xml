@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Date (yyyy-mm-dd)"
+        android:text="Date (MM/dd/yyyy)"
         android:id="@+id/textEnterDate"
         android:layout_marginTop="35dp"
         android:layout_below="@+id/textNewHabitTitle"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editDate"
         android:layout_below="@+id/textEnterDate"
         android:layout_alignLeft="@+id/textEnterDate"
         android:layout_alignStart="@+id/textEnterDate" />
@@ -38,20 +38,20 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Habit name"
         android:id="@+id/textEnterHabitName"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editDate"
+        android:layout_alignLeft="@+id/editDate"
+        android:layout_alignStart="@+id/editDate"
         android:layout_marginTop="22dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/editName"
         android:layout_below="@+id/textEnterHabitName"
         android:layout_alignLeft="@+id/textEnterHabitName"
         android:layout_alignStart="@+id/textEnterHabitName"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_alignRight="@+id/editDate"
+        android:layout_alignEnd="@+id/editDate" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="What days of the week should this occur?"
         android:id="@+id/textEnterWhatDays"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="35dp" />

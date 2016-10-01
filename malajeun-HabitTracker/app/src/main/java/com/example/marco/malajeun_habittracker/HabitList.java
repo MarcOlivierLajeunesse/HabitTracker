@@ -1,5 +1,7 @@
 package com.example.marco.malajeun_habittracker;
 
+import org.xml.sax.HandlerBase;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -18,6 +20,7 @@ public class HabitList {
     public void add(Habit habit) {
 
         habits.add(habit);
+        //notifyAll();;
     }
 
     public boolean hasHabit(Habit habit) {
@@ -41,6 +44,11 @@ public class HabitList {
         habits.remove(habit);
     }
 
+    public void deleteHabitByIndex(int i){
+        Habit habit = habits.get(i);
+        habits.remove(habit);
+    }
+
     public Habit getHabitByName(String habName) {
         Habit habit = new Habit();
         for(int i = 0; i < habits.size(); ++i){
@@ -60,5 +68,10 @@ public class HabitList {
     public List<Habit> getHabits() {
 
         return habits;
+    }
+
+    public void completeHabit(int i){
+        Habit habit = habits.get(i);
+        habit.complete();
     }
 }

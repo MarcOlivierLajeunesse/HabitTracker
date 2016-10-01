@@ -100,6 +100,22 @@ public class HabitListTest extends ActivityInstrumentationTestCase2 {
         assertTrue(hList.size() == 0);
     }
 
+    public void testDeleteHabitByIndex(){
+        HabitList hList = new HabitList();
+
+        Habit a = new Habit();
+        String habName = "habit a";
+        a.setName(habName);
+
+        hList.add(a);
+        assertTrue(hList.hasHabit(a));
+
+        hList.deleteHabitByIndex(0);
+        assertFalse(hList.hasHabit(a));
+
+        assertTrue(hList.size() == 0);
+    }
+
     public void testGetHabits(){
         HabitList hList = new HabitList();
 
