@@ -46,7 +46,7 @@ public class HistoryActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.habit_context_menu, menu);
+        inflater.inflate(R.menu.history_context_menu, menu);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch (item.getItemId()){
-            case R.id.habitMenueDelete:
+            case R.id.historyMenueDelete:
                 Toast.makeText(HistoryActivity.this, "record deleted", Toast.LENGTH_SHORT).show();
                 hlc.deleteCompleted(info.id);
                 adapter.notifyDataSetChanged();

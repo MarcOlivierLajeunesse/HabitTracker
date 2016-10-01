@@ -73,7 +73,8 @@
         android:checked="false"
         android:layout_below="@+id/textEnterWhatDays"
         android:layout_alignLeft="@+id/textNewHabitTitle"
-        android:layout_alignStart="@+id/textNewHabitTitle" />
+        android:layout_alignStart="@+id/textNewHabitTitle"
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -83,7 +84,8 @@
         android:checked="false"
         android:layout_below="@+id/checkBoxMonday"
         android:layout_alignLeft="@+id/checkBoxMonday"
-        android:layout_alignStart="@+id/checkBoxMonday" />
+        android:layout_alignStart="@+id/checkBoxMonday"
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -93,7 +95,8 @@
         android:checked="false"
         android:layout_below="@+id/checkBoxTuesday"
         android:layout_alignLeft="@+id/checkBoxTuesday"
-        android:layout_alignStart="@+id/checkBoxTuesday" />
+        android:layout_alignStart="@+id/checkBoxTuesday"
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -103,7 +106,8 @@
         android:checked="false"
         android:layout_below="@+id/checkBoxWednesday"
         android:layout_alignLeft="@+id/checkBoxWednesday"
-        android:layout_alignStart="@+id/checkBoxWednesday" />
+        android:layout_alignStart="@+id/checkBoxWednesday"
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -113,7 +117,8 @@
         android:checked="false"
         android:layout_below="@+id/checkBoxThursday"
         android:layout_alignLeft="@+id/checkBoxSaturday"
-        android:layout_alignStart="@+id/checkBoxSaturday" />
+        android:layout_alignStart="@+id/checkBoxSaturday"
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -123,7 +128,8 @@
         android:checked="false"
         android:layout_below="@+id/checkBoxFriday"
         android:layout_alignLeft="@+id/checkBoxThursday"
-        android:layout_alignStart="@+id/checkBoxThursday" />
+        android:layout_alignStart="@+id/checkBoxThursday"
+        android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -133,7 +139,8 @@
         android:checked="false"
         android:layout_below="@+id/checkBoxSaturday"
         android:layout_alignLeft="@+id/checkBoxSaturday"
-        android:layout_alignStart="@+id/checkBoxSaturday" />
+        android:layout_alignStart="@+id/checkBoxSaturday"
+        android:onClick="onCheckboxClicked" />
 
     <Button
         android:layout_width="wrap_content"

@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Date;
+import java.util.List;
 
 public class HabitInfoActivity extends AppCompatActivity {
 
@@ -16,15 +20,27 @@ public class HabitInfoActivity extends AppCompatActivity {
     private int habitIndex;
     private TextView titleText;
     private TextView countText;
+    private ListView daysListV;
+
+    private ArrayAdapter<Boolean> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.habit_info);
 
+        habitIndex = hlc.getCurrentHabitIndex();
+
+        //list view
+        daysListV = (ListView) findViewById(R.id.chosenDayList);
+
+        List<Boolean> dayList = hlc.getDays();
+        adapter = new ArrayAdapter<Boolean>(this, R.layout.history_list_item, dayList);
+        daysListV.setAdapter(adapter);
+
+        //text views
         titleText = (TextView) findViewById(R.id.habitTitle);
         countText = (TextView) findViewById(R.id.textTimeCompleted);
-        habitIndex = hlc.getCurrentHabitIndex();
         // set Habit Name
         titleText.setText(hlc.getCurrentHabitName());
         // displays count
@@ -67,6 +83,7 @@ public class HabitInfoActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-
+        adapter.notifyDataSetChanged();
     }
+
 }

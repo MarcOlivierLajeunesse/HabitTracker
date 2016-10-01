@@ -1,7 +1,9 @@
 package com.example.marco.malajeun_habittracker;
 
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Marco on 27-Sep-2016.
@@ -13,8 +15,9 @@ public class Habit{
     private int completeCount;
     private CompletedList completed;
     private Boolean isComplete;
-
-
+    //private Boolean[] days = new Boolean[7]; // days[0] is monday... days[6] is sunday
+    //List<Boolean> days = Arrays.asList(new Boolean[7]);// days[0] is monday... days[6] is sunday
+    private List<String> days;
 
     //Constructor
     public Habit(){
@@ -22,6 +25,7 @@ public class Habit{
         this.completed = new CompletedList();
         //this.date = new Date();
         this.isComplete = false;
+        //Arrays.fill(days, false);
     }
 
     //Methods
@@ -61,6 +65,10 @@ public class Habit{
     }
 
     private String completionStatus(){
+        if (completed.size() == 0){
+            //if the completion history is deleted, then the habit is marked as incomplete
+            isComplete = false;
+        }
         if(isComplete){
             return "completed for the day";
         } else{
@@ -71,6 +79,25 @@ public class Habit{
     public void resetCompletionStatus(){
         //called at midnight of everyday
         isComplete = false;
+    }
+
+//    public void checkDay(String day){
+//        //days[i] = true;
+//        //days.set(i,true);
+//        days.add(day);
+//    }
+//
+//    public void uncheckDay(String day){
+//        //days[i] = false;
+//        //days.set(i,false);
+//        days.remove(day);
+//    }
+    public void setDays(List<String> dayList){
+        days = dayList;
+    }
+
+    public List getDays(){
+        return days;
     }
 
     @Override
