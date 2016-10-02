@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">malajeun-HabitTracker</string>
+    <string name="title_activity_new_habit">NewHabitActivity</string>
+</resources>

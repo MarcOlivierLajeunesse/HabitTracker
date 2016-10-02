@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Habit Name"
+        android:id="@+id/textHabitName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Number of days completed"
+        android:id="@+id/textTimeCompleted"
+        android:layout_marginTop="144dp"
+        android:layout_below="@+id/textHabitName"
+        android:layout_alignLeft="@+id/textHabitName"
+        android:layout_alignStart="@+id/textHabitName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Number of days incompleted"
+        android:id="@+id/textDaysIncompleted"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/textTimeCompleted"
+        android:layout_alignLeft="@+id/textTimeCompleted"
+        android:layout_alignStart="@+id/textTimeCompleted" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/daysListView"
+        android:layout_below="@+id/textHabitName"
+        android:layout_alignLeft="@+id/textHabitName"
+        android:layout_alignStart="@+id/textHabitName"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/textDaysIncompleted"
+        android:layout_alignEnd="@+id/textDaysIncompleted"
+        android:layout_alignBottom="@+id/textTimeCompleted" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Completion Status"
+        android:id="@+id/textCompletionStatus"
+        android:layout_below="@+id/textDaysIncompleted"
+        android:layout_alignLeft="@+id/textDaysIncompleted"
+        android:layout_alignStart="@+id/textDaysIncompleted"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete Task"
+        android:id="@+id/completeButton"
+        android:layout_below="@+id/textCompletionStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View History"
+        android:id="@+id/viewHistoryButton"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/completeButton"
+        android:layout_alignLeft="@+id/completeButton"
+        android:layout_alignStart="@+id/completeButton"
+        android:layout_alignRight="@+id/completeButton"
+        android:layout_alignEnd="@+id/completeButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteHabitButton"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/viewHistoryButton"
+        android:layout_alignLeft="@+id/viewHistoryButton"
+        android:layout_alignStart="@+id/viewHistoryButton"
+        android:layout_alignRight="@+id/viewHistoryButton"
+        android:layout_alignEnd="@+id/viewHistoryButton" />
+</RelativeLayout>
