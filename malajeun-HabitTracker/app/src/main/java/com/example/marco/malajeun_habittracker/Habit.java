@@ -12,25 +12,19 @@ public class Habit{
     //Attributes
     private String habitName;
     private Date date;
-    private int completeCount;
     private CompletedList completed;
     private Boolean isComplete;
-    //private Boolean[] days = new Boolean[7]; // days[0] is monday... days[6] is sunday
-    //List<Boolean> days = Arrays.asList(new Boolean[7]);// days[0] is monday... days[6] is sunday
-    private List<String> days;
+    private List<String> days; //days of the week that the habit will be completed
 
     //Constructor
-    public Habit(){
-        this.completeCount = 0;
+    public Habit() {
         this.completed = new CompletedList();
-        //this.date = new Date();
         this.isComplete = false;
-        //Arrays.fill(days, false);
     }
 
     //Methods
     public void setName(String name) {
-        this.habitName = name;
+        habitName = name;
     }
 
     public String getName() {
@@ -47,21 +41,15 @@ public class Habit{
 
     public void complete(){
         completed.addCompleted();
-        completeCount = completed.size();
         isComplete = true;
     }
 
     public CompletedList viewCompleted(){
-        //return completed.getCompleted();
         return completed;
     }
 
     public int getCount(){
         return completed.size();
-    }
-
-    public void updateCount(){
-        completeCount = completed.size();
     }
 
     private String completionStatus(){
@@ -76,27 +64,14 @@ public class Habit{
         }
     }
 
-    public void resetCompletionStatus(){
-        //called at midnight of everyday
-        isComplete = false;
-    }
 
-//    public void checkDay(String day){
-//        //days[i] = true;
-//        //days.set(i,true);
-//        days.add(day);
-//    }
-//
-//    public void uncheckDay(String day){
-//        //days[i] = false;
-//        //days.set(i,false);
-//        days.remove(day);
-//    }
     public void setDays(List<String> dayList){
+        // set days of the week that the habit will be completed
         days = dayList;
     }
 
     public List getDays(){
+        // return days of the week that the habit will be completed
         return days;
     }
 

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="62cm" height="51cm" viewBox="79 -208 1235 1011" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="566" y="539" width="248.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="566" y="539" width="248.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="690.35" y="558">Habit</text>
+    <rect style="fill: #ffffff" x="566" y="567" width="248.7" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="566" y="567" width="248.7" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="581">-habitName: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="597">-date: Date</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="613">-completedList: completedList</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="629">-isComplete: Boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="645">-days: List&lt;String&gt;</text>
+    <rect style="fill: #ffffff" x="566" y="651" width="248.7" height="116"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="566" y="651" width="248.7" height="116"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="665">+setName(name:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="681">+getName(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="697">+setDate(date:Date): Date</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="713">+getDate(): Date</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="729">+complete(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="745">+viewCompleted(): CompletedList</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="569" y="761">+completionStatus(): String</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="775.998" y="257.88" width="256.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="775.998" y="257.88" width="256.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="904.198" y="276.88">HabitList</text>
+    <rect style="fill: #ffffff" x="775.998" y="285.88" width="256.4" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="775.998" y="285.88" width="256.4" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="299.88">-habits: List&lt;Habit&gt;</text>
+    <rect style="fill: #ffffff" x="775.998" y="305.88" width="256.4" height="116"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="775.998" y="305.88" width="256.4" height="116"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="319.88">+add(habit:Habit): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="335.88">+getHabitByIndex(i:int): Habit</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="351.88">+getHabits(): List&lt;Habit&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="367.88">+hasHabit(habit:Habit): Boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="383.88">+deleteHabitByIndex(i:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="399.88">+size(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="778.998" y="415.88">+completeHabit(i:int): void</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="904.198,447.051 904.198,487.44 690.35,487.44 690.35,539 "/>
+    <polygon style="fill: #ffffff" points="904.198,421.88 908.998,435.88 904.198,449.88 899.398,435.88 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="904.198,421.88 908.998,435.88 904.198,449.88 899.398,435.88 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="797.274" y="484.44"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="915.198" y="433.88"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="694.35" y="535"></text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="880.329" y="583.441" width="241" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="880.329" y="583.441" width="241" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1000.83" y="602.441">CompletedList</text>
+    <rect style="fill: #ffffff" x="880.329" y="611.441" width="241" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="880.329" y="611.441" width="241" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="883.329" y="625.441">-cHabits: List&lt;Date&gt;</text>
+    <rect style="fill: #ffffff" x="880.329" y="631.441" width="241" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="880.329" y="631.441" width="241" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="883.329" y="645.441">+addCompleted(date:Date): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="883.329" y="661.441">+size(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="883.329" y="677.441">+getDate(index:Int): Date</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="883.329" y="693.441">+delete(i:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="883.329" y="709.441">+getCompleted(): List</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="690.35,792.172 690.35,802 845.589,802 845.589,562.441 1000.83,562.441 1000.83,583.441 "/>
+    <polygon style="fill: #ffffff" points="690.35,767 695.15,781 690.35,795 685.55,781 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="690.35,767 695.15,781 690.35,795 685.55,781 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="847.589" y="679.221"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="701.35" y="779"></text>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1004.83" y="579.441"></text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="621.096,498 665.596,498 677.596,510 677.596,532 621.096,532 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="621.096,498 665.596,498 677.596,510 677.596,532 621.096,532 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="665.596,498 665.596,510 677.596,510 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="628.096" y="522.9">
+      <tspan x="628.096" y="522.9">0...*</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="1056.63,537.48 1101.13,537.48 1113.13,549.48 1113.13,571.48 1056.63,571.48 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1056.63,537.48 1101.13,537.48 1113.13,549.48 1113.13,571.48 1056.63,571.48 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="1101.13,537.48 1101.13,549.48 1113.13,549.48 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1063.63" y="562.38">
+      <tspan x="1063.63" y="562.38">0...*</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="849.304" y="-77.0071" width="464.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="849.304" y="-77.0071" width="464.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1081.45" y="-58.0071">HabitListController</text>
+    <rect style="fill: #ffffff" x="849.304" y="-49.0071" width="464.3" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="849.304" y="-49.0071" width="464.3" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="-35.0071">-currentSelected: static long</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="-19.0071">-habitList: HabitList = null</text>
+    <rect style="fill: #ffffff" x="849.304" y="-13.0071" width="464.3" height="180"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="849.304" y="-13.0071" width="464.3" height="180"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="0.992943">+getHabitList(): HabitList</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="16.9929">+delete(index:long): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="32.9929">+complete(index:long): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="48.9929">+add(name:String,dateString:String,days:List&lt;String&gt;): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="64.9929">+setCurrentHabitIndex(index:long): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="80.9929">+getCurrentHabitIndex(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="96.9929">+getCurrentHabitName(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="112.993">+getCompleteCount(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="128.993">+getDays(): List</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="144.993">+getHistory(): CompletedList</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="852.304" y="160.993">+deleteCompleted(id:long): void</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1081.45,192.165 1081.45,219.436 904.198,219.436 904.198,257.88 "/>
+    <polygon style="fill: #ffffff" points="1081.45,166.993 1086.25,180.993 1081.45,194.993 1076.65,180.993 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1081.45,166.993 1086.25,180.993 1081.45,194.993 1076.65,180.993 "/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="848.71,211.218 877.81,211.218 889.81,223.218 889.81,245.218 848.71,245.218 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="848.71,211.218 877.81,211.218 889.81,223.218 889.81,245.218 848.71,245.218 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="877.81,211.218 877.81,223.218 889.81,223.218 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="855.71" y="236.118">
+      <tspan x="855.71" y="236.118">0,1</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="94.5683" y="-206.721" width="502.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="94.5683" y="-206.721" width="502.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="345.968" y="-187.721">MainActivity</text>
+    <rect style="fill: #ffffff" x="94.5683" y="-178.721" width="502.8" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="94.5683" y="-178.721" width="502.8" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-164.721">-hlc: HabitListController</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-148.721">-adapter: ArrayAdapter&lt;Habit&gt;</text>
+    <rect style="fill: #ffffff" x="94.5683" y="-142.721" width="502.8" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="94.5683" y="-142.721" width="502.8" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-128.721">#onCreate(savedInstanceState:Bundle): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-112.721">+onCreateContextMenu(menu:ContextMenu,v:View,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-96.7209">                     menuInfo:ContextMenu.ContextMenuInfo): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-80.7209">+onContextItemSelected(item:MenuItem): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="-64.7209">#onStart(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="91.4838" y="-17.0289" width="333.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="91.4838" y="-17.0289" width="333.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="258.184" y="1.97108">NewHabitActivity</text>
+    <rect style="fill: #ffffff" x="91.4838" y="10.9711" width="333.4" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="91.4838" y="10.9711" width="333.4" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="94.4838" y="24.9711">-hlc: HabitListController</text>
+    <rect style="fill: #ffffff" x="91.4838" y="30.9711" width="333.4" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="91.4838" y="30.9711" width="333.4" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="94.4838" y="44.9711">#onCreate(savedInstanceState:Bundle): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="94.4838" y="60.9711">+onCheckboxClicked(view:View): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="94.4838" y="76.9711">-resetDate(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="94.4838" y="92.9711">-resetCheckBoxes(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="94.5683" y="138.734" width="333.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="94.5683" y="138.734" width="333.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="261.268" y="157.734">HabitInfoActivity</text>
+    <rect style="fill: #ffffff" x="94.5683" y="166.734" width="333.4" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="94.5683" y="166.734" width="333.4" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="180.734">-hlc: HabitListController</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="196.734">-adapter: ArrayAdapter&lt;String&gt;</text>
+    <rect style="fill: #ffffff" x="94.5683" y="202.734" width="333.4" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="94.5683" y="202.734" width="333.4" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="216.734">#onCreate(savedInstanceState:Bundle): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="97.5683" y="232.734">#onStart(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="80.6884" y="274.449" width="502.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="80.6884" y="274.449" width="502.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="332.088" y="293.449">HistoryActivity</text>
+    <rect style="fill: #ffffff" x="80.6884" y="302.449" width="502.8" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="80.6884" y="302.449" width="502.8" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="316.449">-hlc: HabitListController</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="332.449">-adapter: ArrayAdapter&lt;Date&gt;</text>
+    <rect style="fill: #ffffff" x="80.6884" y="338.449" width="502.8" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="80.6884" y="338.449" width="502.8" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="352.449">#onCreate(savedInstanceState:Bundle): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="368.449">+onCreateContextMenu(menu:ContextMenu,v:View,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="384.449">                     menuInfo:ContextMenu.ContextMenuInfo): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="400.449">+onContextItemSelect(item:MenuItem): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="83.6884" y="416.449">#onStart(): void</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="622.54,-152.721 730.336,-152.721 730.336,-63.0071 849.304,-63.0071 "/>
+    <polygon style="fill: #ffffff" points="597.368,-152.721 611.368,-157.521 625.368,-152.721 611.368,-147.921 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="597.368,-152.721 611.368,-157.521 625.368,-152.721 611.368,-147.921 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="450.055,-3.02892 644.094,-3.02892 644.094,-39.0071 849.304,-39.0071 "/>
+    <polygon style="fill: #ffffff" points="424.884,-3.02892 438.884,-7.82892 452.884,-3.02892 438.884,1.77108 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="424.884,-3.02892 438.884,-7.82892 452.884,-3.02892 438.884,1.77108 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="453.14,152.734 645.636,152.734 645.636,60.9929 849.304,60.9929 "/>
+    <polygon style="fill: #ffffff" points="427.968,152.734 441.968,147.934 455.968,152.734 441.968,157.534 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="427.968,152.734 441.968,147.934 455.968,152.734 441.968,157.534 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="608.66,288.449 723.396,288.449 723.396,140.993 849.304,140.993 "/>
+    <polygon style="fill: #ffffff" points="583.488,288.449 597.488,283.649 611.488,288.449 597.488,293.249 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="583.488,288.449 597.488,283.649 611.488,288.449 597.488,293.249 "/>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="809.374,-109.469 823.074,-109.469 835.074,-97.4689 835.074,-75.4689 809.374,-75.4689 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="809.374,-109.469 823.074,-109.469 835.074,-97.4689 835.074,-75.4689 809.374,-75.4689 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="823.074,-109.469 823.074,-97.4689 835.074,-97.4689 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="816.374" y="-84.5689">
+      <tspan x="816.374" y="-84.5689">1</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="806.007,-32.773 819.707,-32.773 831.707,-20.773 831.707,1.22704 806.007,1.22704 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="806.007,-32.773 819.707,-32.773 831.707,-20.773 831.707,1.22704 806.007,1.22704 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="819.707,-32.773 819.707,-20.773 831.707,-20.773 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="813.007" y="-7.87296">
+      <tspan x="813.007" y="-7.87296">1</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="805.413,20.1466 819.113,20.1466 831.113,32.1466 831.113,54.1466 805.413,54.1466 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="805.413,20.1466 819.113,20.1466 831.113,32.1466 831.113,54.1466 805.413,54.1466 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="819.113,20.1466 819.113,32.1466 831.113,32.1466 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="812.413" y="45.0466">
+      <tspan x="812.413" y="45.0466">1</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="810.764,96.2557 824.464,96.2557 836.464,108.256 836.464,130.256 810.764,130.256 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="810.764,96.2557 824.464,96.2557 836.464,108.256 836.464,130.256 810.764,130.256 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" points="824.464,96.2557 824.464,108.256 836.464,108.256 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="817.764" y="121.156">
+      <tspan x="817.764" y="121.156">1</tspan>
+    </text>
+  </g>
+</svg>

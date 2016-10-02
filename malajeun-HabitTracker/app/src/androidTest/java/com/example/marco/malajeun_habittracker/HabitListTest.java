@@ -34,18 +34,18 @@ public class HabitListTest extends ActivityInstrumentationTestCase2 {
         assertTrue(hList.hasHabit(habit));
     }
 
-    public void testGetHabit(){
-        HabitList hList = new HabitList();
-
-        Habit habit = new Habit();
-        String habName = "habit a";
-        habit.setName(habName);
-
-        hList.add(habit);
-
-        assertEquals(habit, hList.getHabit(habit));
-
-    }
+//    public void testGetHabit(){
+//        HabitList hList = new HabitList();
+//
+//        Habit habit = new Habit();
+//        String habName = "habit a";
+//        habit.setName(habName);
+//
+//        hList.add(habit);
+//
+//        assertEquals(habit, hList.getHabit(habit));
+//
+//    }
 
     public void getHabitByIndex(){
         HabitList hList = new HabitList();
@@ -59,46 +59,46 @@ public class HabitListTest extends ActivityInstrumentationTestCase2 {
         assertEquals(habit, hList.getHabitByIndex(0));
     }
 
-    public void getHabitByName(){
-        HabitList hList = new HabitList();
+//    public void getHabitByName(){
+//        HabitList hList = new HabitList();
+//
+//        Habit a = new Habit();
+//        Habit b = new Habit();
+//        String habName = "habit a";
+//        String habNameB = "habit b";
+//        String habNameC = " habbit c";
+//        a.setName(habName);
+//        b.setName(habNameB);
+//
+//        hList.add(a);
+//        hList.add(b);
+//
+//        assertEquals(a, hList.getHabitByName(habName));
+//        assertFalse(a == hList.getHabitByName(habNameB));
+//
+//        try{
+//            Habit c = hList.getHabitByName(habNameC);
+//            fail();
+//        } catch(NoSuchElementException e){
+//
+//        }
+//    }
 
-        Habit a = new Habit();
-        Habit b = new Habit();
-        String habName = "habit a";
-        String habNameB = "habit b";
-        String habNameC = " habbit c";
-        a.setName(habName);
-        b.setName(habNameB);
-
-        hList.add(a);
-        hList.add(b);
-
-        assertEquals(a, hList.getHabitByName(habName));
-        assertFalse(a == hList.getHabitByName(habNameB));
-
-        try{
-            Habit c = hList.getHabitByName(habNameC);
-            fail();
-        } catch(NoSuchElementException e){
-
-        }
-    }
-
-    public void testDeleteHabit(){
-        HabitList hList = new HabitList();
-
-        Habit a = new Habit();
-        String habName = "habit a";
-        a.setName(habName);
-
-        hList.add(a);
-        assertTrue(hList.hasHabit(a));
-
-        hList.deleteHabit(a);
-        assertFalse(hList.hasHabit(a));
-
-        assertTrue(hList.size() == 0);
-    }
+//    public void testDeleteHabit(){
+//        HabitList hList = new HabitList();
+//
+//        Habit a = new Habit();
+//        String habName = "habit a";
+//        a.setName(habName);
+//
+//        hList.add(a);
+//        assertTrue(hList.hasHabit(a));
+//
+//        hList.deleteHabit(a);
+//        assertFalse(hList.hasHabit(a));
+//
+//        assertTrue(hList.size() == 0);
+//    }
 
     public void testDeleteHabitByIndex(){
         HabitList hList = new HabitList();

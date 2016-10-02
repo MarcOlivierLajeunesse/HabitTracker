@@ -1,6 +1,5 @@
 package com.example.marco.malajeun_habittracker;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,17 +11,18 @@ public class CompletedList {
     //Attributes
     private List<Date> cHabits = new ArrayList<Date>();
 
-    //Contructor: Default Constructor
+    //Constructor: Default Constructor
 
     //Methods
-    void addCompleted(Date date){
+    public void addCompleted(Date date){
+        //used for testing purposes
         cHabits.add(date);
     }
-    void addCompleted(){
+    public void addCompleted(){
         cHabits.add(new Date());
     }
 
-    int size(){
+    public int size(){
         return cHabits.size();
     }
 
@@ -30,22 +30,14 @@ public class CompletedList {
         return cHabits.get(i);
     }
 
-    void delete(Date date){
-        cHabits.remove(date);
-    }
 
-    void delete(int i){
+    public void delete(int i){
         Date date = cHabits.get(i);
         cHabits.remove(date);
     }
 
-    List getCompleted(){
+    public List getCompleted(){
         return cHabits;
     }
 
-//    public String toString(Date aDate){
-//        SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
-//        String dString = df.format(aDate);
-//        return dString;
-//    }
 }

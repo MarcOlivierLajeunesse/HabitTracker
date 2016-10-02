@@ -1,10 +1,12 @@
 package com.example.marco.malajeun_habittracker;
 
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
 
 /**
  * Created by Marco on 30-Sep-2016.
@@ -18,6 +20,7 @@ public class HabitListController {
 
 
     static public HabitList getHabitList(){
+        // from StudentPicker https://archive.org/details/studentpicker-android-application
         if (habitList == null){
             habitList = new HabitList();
         }
@@ -67,41 +70,7 @@ public class HabitListController {
         //used for habit info
         return habitList.getHabitByIndex((int)currentSelected).getCount();
     }
-//    static public void setDay(int i){
-//        //habitList.getHabitByIndex((int)currentSelected).checkDay(i);
-//        if(i == 0){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Monday");
-//        }else if(i == 1){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Tuesday");
-//        }else if(i == 2){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Wednesday");
-//        } else if(i == 3){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Thursday");
-//        } else if(i == 4){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Friday");
-//        } else if(i == 5){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Saturday");
-//        } else if(i == 6){
-//            habitList.getHabitByIndex((int)currentSelected).checkDay("Sunday");
-//        }
-//    }
-//    static public void unsetDay(int i){
-//        if(i == 0){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Monday");
-//        }else if(i == 1){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Tuesday");
-//        }else if(i == 2){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Wednesday");
-//        } else if(i == 3){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Thursday");
-//        } else if(i == 4){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Friday");
-//        } else if(i == 5){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Saturday");
-//        } else if(i == 6){
-//            habitList.getHabitByIndex((int)currentSelected).uncheckDay("Sunday");
-//        }
-//    }
+
     static public List getDays(){
         return habitList.getHabitByIndex((int)currentSelected).getDays();
     }
@@ -112,4 +81,5 @@ public class HabitListController {
     static public void deleteCompleted(long id){
         habitList.getHabitByIndex((int)currentSelected).viewCompleted().delete((int) id);
     }
+
 }

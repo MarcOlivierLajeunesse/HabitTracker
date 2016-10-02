@@ -61,20 +61,20 @@ public class testCompletedList extends ActivityInstrumentationTestCase2 {
 
         assertEquals(7, cList.size());
     }
-
-    public void testDeleteDate(){
-        CompletedList cList = new CompletedList();
-
-        Date date1 = new Date();
-
-        assertEquals(0, cList.size());
-
-        cList.addCompleted(date1);
-        assertEquals(1, cList.size());
-
-        cList.delete(date1);
-        assertEquals(0, cList.size());
-    }
+//
+//    public void testDeleteDate(){
+//        CompletedList cList = new CompletedList();
+//
+//        Date date1 = new Date();
+//
+//        assertEquals(0, cList.size());
+//
+//        cList.addCompleted(date1);
+//        assertEquals(1, cList.size());
+//
+//        cList.delete(date1);
+//        assertEquals(0, cList.size());
+//    }
 
     public void testDeleteIndex(){
         CompletedList cList = new CompletedList();

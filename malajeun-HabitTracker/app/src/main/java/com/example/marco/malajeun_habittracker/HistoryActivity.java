@@ -50,14 +50,17 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     @Override
+    //context menu
     public boolean onContextItemSelected(MenuItem item){
         HabitListController hlc = new HabitListController(); // controller for habit list
 
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        //delete button
         switch (item.getItemId()){
             case R.id.historyMenueDelete:
                 Toast.makeText(HistoryActivity.this, "record deleted", Toast.LENGTH_SHORT).show();
                 hlc.deleteCompleted(info.id);
+//                hlc.saveInFile(this);
                 adapter.notifyDataSetChanged();
                 return true;
             default:

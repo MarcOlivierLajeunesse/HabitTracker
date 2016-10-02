@@ -31,18 +31,18 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
-import static android.view.View.*;
+
 
 public class MainActivity extends AppCompatActivity {
 
+
     private ListView habitListV;
 
-    //private HabitList habitList;
-    //private List<Habit> hList = habitList.getHabits();
-    //private List<Habit> hList = new ArrayList<Habit>();
+    private List<Habit> hList;
+
     private ArrayAdapter<Habit> adapter;
 
     private HabitListController hlc = new HabitListController(); // controller for habit list
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         habitListV = (ListView) findViewById(R.id.habitListView);
 
-        List<Habit> hList = new HabitListController().getHabitList().getHabits();
+        hList = new HabitListController().getHabitList().getHabits();
         adapter = new ArrayAdapter<Habit>(this, R.layout.habit_list_item, hList);
         habitListV.setAdapter(adapter);
 
@@ -63,14 +63,12 @@ public class MainActivity extends AppCompatActivity {
         Button newHabitButton = (Button) findViewById(R.id.newHabitButton);
         newHabitButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                // Toast.makeText(MainActivity.this, "new habit", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, NewHabitActivity.class);
                 startActivity(intent);
             }
         });
         habitListV.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                //Toast.makeText(MainActivity.this, "checking habit", Toast.LENGTH_SHORT).show();
                 hlc.setCurrentHabitIndex(id);
                 Intent intent = new Intent(MainActivity.this, HabitInfoActivity.class);
 
@@ -89,19 +87,17 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onContextItemSelected(MenuItem item){
-        HabitListController hlc = new HabitListController(); // controller for habit list
 
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch (item.getItemId()){
             case R.id.habitMenuComplete:
                 Toast.makeText(MainActivity.this, "habit completed for the day", Toast.LENGTH_SHORT).show();
-                //hList.get((int)info.id).complete(); // info.id is long type by default
                 hlc.complete(info.id);
                 adapter.notifyDataSetChanged();
                 return true;
             case R.id.habitMenueDelete:
                 Toast.makeText(MainActivity.this, "habit deleted", Toast.LENGTH_SHORT).show();
-                //hList.remove((int)info.id);
+
                 hlc.delete(info.id);
                 adapter.notifyDataSetChanged();
                 return true;
@@ -115,9 +111,9 @@ public class MainActivity extends AppCompatActivity {
     // from LonelyTwitter
     protected void onStart() {
         super.onStart();
-
         adapter.notifyDataSetChanged();
     }
+
 
 
 }

@@ -15,33 +15,21 @@ public class HabitList {
 
     //Constructor: Default constructor
 
-
     //Methods
     public void add(Habit habit) {
-
         habits.add(habit);
-        //notifyAll();;
-    }
-
-    public boolean hasHabit(Habit habit) {
-
-        return habits.contains(habit);
-    }
-
-
-    public Habit getHabit(Habit habit) {
-        int index = habits.indexOf(habit);
-        return habits.get(index);
     }
 
     public Habit getHabitByIndex(int i) {
-
         return habits.get(i);
     }
 
-    public void deleteHabit(Habit habit) {
+    public List<Habit> getHabits() {
+        return habits;
+    }
 
-        habits.remove(habit);
+    public boolean hasHabit(Habit habit) {
+        return habits.contains(habit);
     }
 
     public void deleteHabitByIndex(int i){
@@ -49,29 +37,15 @@ public class HabitList {
         habits.remove(habit);
     }
 
-    public Habit getHabitByName(String habName) {
-        Habit habit = new Habit();
-        for(int i = 0; i < habits.size(); ++i){
-            habit = habits.get(i);
-            String habitName = habit.getName();
-            if(habName == habitName){
-                return habit;
-            }
-        }
-        throw new NoSuchElementException("no habits have that name");
-    }
-
     public int size() {
         return habits.size();
     }
 
-    public List<Habit> getHabits() {
 
-        return habits;
-    }
 
     public void completeHabit(int i){
         Habit habit = habits.get(i);
         habit.complete();
     }
+
 }

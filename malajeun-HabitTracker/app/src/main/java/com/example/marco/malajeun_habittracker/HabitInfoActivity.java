@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Date;
 import java.util.List;
 
 public class HabitInfoActivity extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class HabitInfoActivity extends AppCompatActivity {
     private TextView countText;
     private ListView daysListV;
 
-    private ArrayAdapter<Boolean> adapter;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +32,8 @@ public class HabitInfoActivity extends AppCompatActivity {
         //list view
         daysListV = (ListView) findViewById(R.id.chosenDayList);
 
-        List<Boolean> dayList = hlc.getDays();
-        adapter = new ArrayAdapter<Boolean>(this, R.layout.history_list_item, dayList);
+        List<String> dayList = hlc.getDays();
+        adapter = new ArrayAdapter<String>(this, R.layout.history_list_item, dayList);
         daysListV.setAdapter(adapter);
 
         //text views
@@ -46,6 +44,7 @@ public class HabitInfoActivity extends AppCompatActivity {
         // displays count
         countText.setText("Number of times completed: " + hlc.getCompleteCount());
 
+        //complete button
         Button completeButton = (Button) findViewById(R.id.completeButton);
         completeButton.setOnClickListener(new View.OnClickListener(){
             //complete habit
@@ -55,6 +54,7 @@ public class HabitInfoActivity extends AppCompatActivity {
                 countText.setText("Number of times completed: " + hlc.getCompleteCount());
             }
         });
+        //delete button
         Button deleteButton = (Button) findViewById(R.id.deleteHabitButton);
         deleteButton.setOnClickListener(new View.OnClickListener(){
             //delete habit
@@ -68,6 +68,7 @@ public class HabitInfoActivity extends AppCompatActivity {
                 finish(); // prevents going back
             }
         });
+        //view history button
         Button historyButton = (Button) findViewById(R.id.viewHistoryButton);
         historyButton.setOnClickListener(new View.OnClickListener(){
             //delete habit

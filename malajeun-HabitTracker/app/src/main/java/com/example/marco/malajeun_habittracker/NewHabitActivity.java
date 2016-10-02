@@ -1,6 +1,5 @@
 package com.example.marco.malajeun_habittracker;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,12 +32,10 @@ public class NewHabitActivity extends AppCompatActivity {
 
         textDate.setText(resetDate()); // set default date
 
+        //add habit
         Button addHabit = (Button) findViewById(R.id.addHabitButton);
         addHabit.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-
-                //EditText textName = (EditText) findViewById(R.id.editName);
-                //EditText dateName = (EditText) findViewById(R.id.editDate);
 
                 hlc.add(textName.getText().toString(), textDate.getText().toString(), days);
                 Toast.makeText(NewHabitActivity.this, "Habit Added", Toast.LENGTH_SHORT).show();
@@ -48,10 +45,6 @@ public class NewHabitActivity extends AppCompatActivity {
                 textName.setText("");
                 resetCheckBoxes();
                 days = new ArrayList<String>(); // empty day list
-
-                //Intent intent = new Intent(NewHabitActivity.this, MainActivity.class);
-
-                //startActivity(intent);
             }
         });
     }
@@ -95,7 +88,7 @@ public class NewHabitActivity extends AppCompatActivity {
         return dString;
     }
 
-    public void resetCheckBoxes(){
+    private void resetCheckBoxes(){
         CheckBox Mon = (CheckBox)findViewById(R.id.checkBoxMonday);
         CheckBox Tue = (CheckBox)findViewById(R.id.checkBoxTuesday);
         CheckBox Wed = (CheckBox)findViewById(R.id.checkBoxWednesday);
@@ -103,7 +96,7 @@ public class NewHabitActivity extends AppCompatActivity {
         CheckBox Fri = (CheckBox)findViewById(R.id.checkBoxFriday);
         CheckBox Sat = (CheckBox)findViewById(R.id.checkBoxSaturday);
         CheckBox Sun = (CheckBox)findViewById(R.id.checkBoxSunday);
-        // based on code from http://stackoverflow.com/questions/13377904/how-to-clear-checkboxes-when-reset-button-is-clicked
+
         NewHabitController nhc = new NewHabitController();
         nhc.resetCheckBoxes(Mon);
         nhc.resetCheckBoxes(Tue);
